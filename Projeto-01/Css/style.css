@@ -1,0 +1,77 @@
+:root {
+   --cor-body-background: #faf6ed /* cor de fundo da pág */
+   --cor-tipografia-geral: #222; /* cor para letras */
+   --cor-menu-background: #fa9a0a; /* cor de fundo para o menu*/
+   --cor-titulo-animais: #c13829; /* cor do nomes dos animais*/
+   --cor-detalhe-background: #efa536; /**/
+   --cor-tipografia-faq: #e54;
+}
+
+*{ /* zerando as config do navegador*/
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%; /* evita de a imagem estorar
+  */
+}
+
+ul {
+  list-style: none; /* zera o estilo da lista*/
+}
+
+body{
+  background: var(--cor-body-background);
+  color: var(--cor-tipografia-geral);
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+
+.menu{
+  grid-column: 3 / 5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: var(--cor-menu-background);
+}
+.menu ul{
+  display: flex; /* colocar um item um do lado do outro*/
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.menu li a{
+  display: block;
+  padding: 10px;
+  margin-right: 10px;
+  color: var(--cor-tipografia-geral);
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  font-size: 0.87rem;
+  letter-spacing: .3em;
+}
+
+.grid-section {
+  grid-column: 2 / 6;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-gap: 20px;
+  margin-bottom: 4rem;
+}
+
+.titulo{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  grid-column: 1 / 4;
+}
+
+
