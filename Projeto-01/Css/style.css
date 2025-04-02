@@ -113,5 +113,45 @@ body{
 }
 
 .faq-lista dt::before{
-  
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background: var(--cor-detalhe-background);
+}
+
+.faq-lista dd{
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: .5rem;
+  margin-left: 30px;
+}
+
+.dados{
+  grid-column: 1;
+}
+
+.dados li{
+  margin-bottom: 1rem;
+  font-family: Helvetica, Arial;
+}
+.dados li::before{
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background: var(--cor-detalhe-background);
+}
+
+.copy{
+  grid-column: 3 / 5;
+  margin-bottom: 2rem;
+  background: var(--cor-menu-background);
+}
+
+.copy p{
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
 }
