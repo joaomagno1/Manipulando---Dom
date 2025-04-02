@@ -80,3 +80,38 @@ body{
   gap: 20px;
 }
 
+.animal-item{
+  display: flex;
+  align-items: flex-start;
+}
+
+.animais h2{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 1rem;
+  color: var(--cor-titulo-animais);
+}
+
+.animais p{
+  font-family: 'Times New Roman', Times, serif;
+  list-style: 1.2;
+  margin-bottom: 1rem;
+}
+
+.faq-lista {
+  grid-column: 1;
+}
+
+.faq-lista dt{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  color: var(--cor-tipografia-faq);
+}
+
+.faq-lista dt::before{
+  
+}
