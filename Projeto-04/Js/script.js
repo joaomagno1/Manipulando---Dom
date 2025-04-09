@@ -49,19 +49,43 @@ img.removeAttribute('alt');
 const meusAnimais = document.querySelector('.animais');
 //console.log(meusAnimais);
 
+/*
 console.log(meusAnimais.className);
 meusAnimais.className='azul'; //substitui completamente
 meusAnimais.className+=' vermelho';
 meusAnimais.attributes = 'class=""'
+*/
 
 //objeto.propriedades
-
 //adicione a classe ativo a todos os itens do menu;
 
-//remova a classe ativo de todos os itens
-//mantenha apenas no primeiro;
+const itensMenu = document.querySelectorAll('.menu a');
+console.log(itensMenu);
+
+itensMenu.forEach((item)=>{
+  item.classList.add('ativo');
+});
+
+//remova a classe ativo de todos os itense mantenha apenas no primeiro;
+
+itensMenu.forEach((item)=>{
+  item.classList.remove('ativo');
+});
+itensMenu[0].classList.add('ativo');
 
 //verifique se as imagens possuem o atributo alt;
+
+const pegarImagens = document.querySelectorAll('img');
+pegarImagens.forEach((img)=>{
+  const possuiAlt = img.hasAttribute('alt');
+  console.log(img, possuiAlt);
+});
+
+//modifique o href do link externo no menu = bri.ifsp.edu.br >> www.google.com.br;
+
+const link = document.querySelector('a[href^="https"]');
+link.setAttribute('href', 'https://www.google.com.br');
+console.log(link);
 
 
 
