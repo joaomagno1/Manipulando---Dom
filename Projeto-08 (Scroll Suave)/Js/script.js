@@ -100,7 +100,6 @@ function initscrollSuave(){
       behavior:'smooth',    //transição suave
       block:'start',        //no inicio de cada section.
     });
-
   }
 
   linksInternos.forEach((item)=> {
