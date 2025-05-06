@@ -87,24 +87,8 @@ const link = document.querySelector('a[href^="https"]');
 link.setAttribute('href', 'https://www.google.com.br');
 //console.log(link);
 
-
-function initscrollSuave(){
-  const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
-
-  function scrollToSection(e){
-    e.preventDefault();
-    const href = e.currentTarget.getAttribute('href');
-    const section = document.querySelector(href);
-
-    section.scrollIntoView({
-      behavior:'smooth',    //transição suave
-      block:'start',        //no inicio de cada section.
-    });
-  }
-
-  linksInternos.forEach((item)=> {
-    item.addEventListener('click', scrollToSection);
-  });
-}
-
+import initscrollSuave from "./modules/scroll-suave";
 initscrollSuave();
+
+import { SERVIDOR } from "./modules/constantes";
+console.log(SERVIDOR);
