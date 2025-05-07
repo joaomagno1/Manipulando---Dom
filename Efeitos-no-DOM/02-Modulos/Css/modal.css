@@ -5,12 +5,15 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
-  /*display: none;*/
-  display: flex;
+  z-index: 2000;
+  display: none;
   justify-content: center;
   align-items: center;
 }
+
+.modal-container.ativo {
+  display: flex;
+};
 
 .modal {
   background: whitesmoke;
@@ -32,5 +35,33 @@
   background: red;
   font-size: 1.2rem;
   color: whitesmoke;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.modal label {
+  font-family: 'Times New Roman', Times, serif;
+  display: block;
+  font-weight: 600;
+  margin: 1rem 0 .5rem 0;
+}
+
+.modal input {
+  width: 100%;
+  padding: .7rem .5rem;
+  box-sizing: border-box;
+}
+
+.modal button[type="submit"] {
+  display: block;
+  background:#E54;
+  border: none;
+  border-radius: 4px;
+  padding: .7rem 2rem;
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 1rem;
+  margin-left: 6.2rem;
   cursor: pointer;
 }

@@ -15,7 +15,7 @@
       <li><a href="#animais">Animais</a></li>
       <li><a href="#faq">Faq</a></li>
       <li><a href="#contato">Contato</a></li>
-      <li><a href="https://bri.ifsp.edu.br">IFSP</a></li>
+      <li><a data-modal="abrir" href="login.html">Login</a></li>
     </ul>
   </nav>
   <section class="grid-section animais" id="animais">
@@ -142,9 +142,9 @@
   <p>Todos os direitos reservados.</p>
 </footer>
 
-  <section class="modal-container">
+  <section class="modal-container" data-modal="container">
     <div class="modal">
-      <button class="fechar">X</button>
+      <button class="fechar" data-modal="fechar">X</button>
       <form action="">
         <label for="E-mail">E-mail:</label>
         <input type="text" for="E-mail" id="email" name="email">

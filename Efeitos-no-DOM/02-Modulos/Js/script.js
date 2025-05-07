@@ -88,8 +88,10 @@ link.setAttribute('href', 'https://www.google.com.br');
 //console.log(link);
 */
 
-import initscrollSuave from "./modules/scroll-suave";
-initscrollSuave();
 
-import { SERVIDOR } from "./modules/constantes";
-console.log(SERVIDOR);
+
+initModal();
+import initModal from "./modules/modal.js";
+
+initscrollSuave();
+import initscrollSuave from "./modules/scroll-suave";
