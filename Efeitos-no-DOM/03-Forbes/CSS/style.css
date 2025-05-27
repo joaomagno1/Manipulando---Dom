@@ -1,0 +1,202 @@
+/* 
+  O seletor * aplica as regras para todos os elementos da página.
+  Aqui, removemos margens e preenchimentos padrões dos navegadores,
+  definimos o box-sizing para facilitar cálculos de tamanho,
+  e aplicamos uma fonte padrão.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* 
+  O body é o corpo da página.
+  Aqui, mudamos o fundo para cinza claro e garantimos a fonte escolhida.
+*/
+body {
+  background: #ccc;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* 
+  .container é um "caixa" que centraliza seu conteúdo na tela.
+  O display: flex ativa o Flexbox, facilitando alinhamento.
+  justify-content: center centraliza na horizontal.
+  align-items: center centraliza na vertical.
+  height: 100vh faz a altura ocupar toda a tela.
+  width: 100vw faz a largura ocupar toda a tela.
+*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* 
+  .form-container é o "caixote branco" do formulário.
+  Tem fundo branco, bordas arredondadas e overflow: hidden (para não vazar nada para fora).
+  width: 100% faz ocupar toda a largura possível do container.
+  max-width: 1200px limita o tamanho máximo, útil para telas grandes.
+*/
+.form-container {
+  background-color: white;
+  border-radius: 10px;      /* Bordas arredondadas */
+  -webkit-border-radius: 10px; /* Versão antiga para navegadores antigos */
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px; /* Ajuste o valor conforme o tamanho desejado */
+}
+
+/*
+  .header dá espaçamento acima e abaixo do título do formulário.
+*/
+.header {
+  padding: 30px 0;
+}
+
+/*
+  O título do formulário centralizado, caixa alta e com fonte maior.
+*/
+.header h2 {
+  color: black;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*
+  .form usa grid para organizar os campos em duas colunas com espaçamento.
+  padding cria espaço interno (respiro) nas bordas do form.
+*/
+.form {
+  padding: 25px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/*
+  Cada campo do formulário tem espaçamento inferior e posição relativa,
+  isso permite posicionar ícones dentro dele de forma absoluta.
+*/
+.form-control {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/*
+  O label fica acima do campo, com espaçamento e destaque na fonte.
+*/
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/*
+  Os campos de input ocupam toda a largura do form-control,
+  têm borda arredondada e espaçamento interno.
+*/
+.form-control input {
+  width: 100%;
+  border: 2px solid #f27f27f27;
+  border-radius: 5px;
+  display: block;
+  font-size: 14px;
+  padding: 13px;
+  font-weight: 400;
+}
+
+/*
+  Quando o input está em foco (clicado), muda a cor da borda.
+*/
+.form-control input:focus {
+  outline: none; /* Remove a borda azul padrão do navegador */
+  border-color: #28c0db;
+}
+
+/*
+  Quando há sucesso na validação, a borda do input fica verde.
+*/
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+/*
+  Quando há erro na validação, a borda do input fica vermelha.
+*/
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+/*
+  Os ícones (como check ou exclamação) ficam posicionados dentro dos campos.
+  right: 12px e top: 38px ajustam a posição dentro do campo.
+  visibility: hidden (com i mesmo!) deveria ser visibility: hidden (corrija isso!).
+*/
+.form-control i {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  visibility: hidden;
+}
+
+/*
+  Ícone verde aparece quando o campo está correto.
+*/
+.form-control.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+/*
+  Ícone vermelho aparece quando o campo está incorreto.
+*/
+.form-control.error i.fa-exclamation-circle { 
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control.error span {
+  visibility: visible;
+}
+
+.form-control span {
+  color: #e74c3c;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+}
+
+.btn {
+  background-color: #f27f27;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  display: block;
+  color: whitesmoke;
+  font-size: 1rem;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+form .btn:hover{
+  background-color: green;
+  background-color: linear-gradient(to right, #f27f27, #28c0db);
+}
+
+@media (max-width: 768px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+}
