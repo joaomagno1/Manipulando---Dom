@@ -189,6 +189,14 @@ body {
   text-transform: uppercase;
 }
 
+.form .btn {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 50%;        /* Ou 100% se preferir */
+  margin: 0 auto 20px;
+  display: block;
+}
+
 form .btn:hover{
   background-color: green;
   background-color: linear-gradient(to right, #f27f27, #28c0db);
