@@ -1,11 +1,10 @@
-const formValue = document.getElementById("form");
+const form = document.getElementById("form");
 const nome = document.getElementById("nome");
 const email = document.getElementById("email");
 const senha = document.getElementById("senha");
 const confirmeSenha = document.getElementById("confirmeSenha");
 const telefone = document.getElementById("telefone");
 const data = document.getElementById("data");
-input = document.querySelectorAll("input");
 
 form.addEventListener("submit", (e)=> {
   e.preventDefault();
