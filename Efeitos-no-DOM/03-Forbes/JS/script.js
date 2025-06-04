@@ -11,7 +11,7 @@ form.addEventListener("submit", (e)=> {
   validarDadosDeEntrada();
 });
 
-const sucessMessage = (message)=> {
+const sucessMessage = (input, message)=> {
   const formControl = input.parentElement;
   formControl.className = "form-control success";
 }
@@ -31,12 +31,12 @@ const sucessSubmit = () => {
   for (let i = 0; i < form_control.length; i++) {
     if (form_control[i].className === 'form-control success') {
       soma = 0 + 1;
-      sendData(count, soma);
     }
   }
+  sendData(count, soma);
 }
 
-function sendData() {
+function sendData(count, soma) {
   if (count === soma){
     console.log("Dados enviados com sucesso!");
   }
