@@ -21,7 +21,6 @@ const errorMessage = (input, message)=> {
   const span = formControl.querySelector('span');
   formControl.className = "form-control error";
   span.innerText = message;
-  console.log(span);
 }
 
 const sucessSubmit = () => {
